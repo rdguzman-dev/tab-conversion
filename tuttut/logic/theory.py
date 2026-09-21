@@ -52,7 +52,7 @@ class Tuning:
   standard_tuning = ["E4", "B3", "G3", "D3", "A2", "E2"]
   standard_ukulele_tuning = ["A4", "E4", "C4", "G4"]
 
-  def __init__(self, strings = standard_tuning):
+  def __init__(self, strings = standard_tuning, nfrets = 20):
     """Constructor for the Tuning object.
 
     Args:
@@ -60,7 +60,7 @@ class Tuning:
     """
     self._strings = np.array([Note(note_name_to_number(note)) for note in strings]) #Thin to thick
     self.nstrings = len(strings)
-    self.nfrets = 20
+    self.nfrets = nfrets
 
   @property
   def strings(self):
